@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.bg-gradient{
+    @apply bg-gradient-to-r to-blue-600 from-fuchsia-500;
+}
+
+.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.text-fill-transparent {
+    -webkit-text-fill-color: transparent;
+}
+
+li:hover > .product-wrapper > img {
+    opacity: .5;
+}
+
+li:hover > div:nth-child(2) {
+    @apply active;
+}
+
+.swiper-pagination-bullet{
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    outline: 3px rgb(204,204,204) solid !important; 
+    outline-offset: 5px;
+    margin-right: 2rem !important;
+}
+
+.swiper-pagination-bullet-active {
+    outline: 3px solid rgb(0,122,255) !important;
+}
+
+.category-active {
+    @apply bg-gradient text-white;
+}
+
+.hamburger::before {
+    content: "";
+    height: 2px;
+    width: 2rem;
+    background-color: black;
+    position: absolute;
+    top:90px;
+}
+
+.hamburger::after {
+    content: "";
+    height: 2px;
+    width: 2rem;
+    background-color: black;
+    position: absolute;
+    top:115px;
+}
